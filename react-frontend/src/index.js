@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'jquery/dist/jquery.js';
-import 'bootstrap/dist/js/bootstrap.bundle.js';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -11,6 +8,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './redux/store';
 import axios from 'axios';
 
+// Uncomment this line if you want to purge the Redux store
+// during development / due to an unexpected bug / etc...
 // persistor.purge();
 
 // Configure axios

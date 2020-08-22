@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { clearReduxStore } from '../../../redux/rootReducer';
 import { trackNavbarEvent } from '../../../assets/utils/GoogleAnalytics';
 import { executeOnEnter } from '../../../assets/utils/utils';
+import { Container, Row, Col } from 'react-bootstrap';
 import './UserDropdown.scss';
 
 
@@ -38,35 +39,31 @@ const UserDropdown = ({ onSelect }) => {
 
   return (
     <div className='user-dropdown-wrapper'>
-      <div className='container-fluid'>
-        <div className='row justify-content-end'>
-          <div ref={dropdownRef} className='user-dropdown col-12'>
-            <div className='row'>
-              <div className='col-12'>
-                <div className='row'>
-                  <div className='col-12'>
-                    <Link className='unset-link-styling user-dropdown-btn user-dropdown-open-account-btn no-select' to='/user/account' onClick={trackAccountLinkClick}>
-                      Account
-                    </Link>
-                  </div>
+      <Container fluid>
+        <Row className='justify-content-end'>
+          <Col ref={dropdownRef} className='user-dropdown'>
+            <Row>
+              <Col>
+                <Link className='unset-link-styling user-dropdown-btn user-dropdown-open-account-btn no-select' to='/user/account' onClick={trackAccountLinkClick}>
+                  Account
+                </Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <div
+                  className='user-dropdown-btn user-dropdown-logout-btn no-select'
+                  onClick={logout}
+                  onKeyPress={event => executeOnEnter(event, logout)}
+                  tabIndex='0'
+                >
+                  Log Out
                 </div>
-                <div className='row'>
-                  <div className='col-12'>
-                    <div
-                      className='user-dropdown-btn user-dropdown-logout-btn no-select'
-                      onClick={logout}
-                      onKeyPress={event => executeOnEnter(event, logout)}
-                      tabIndex='0'
-                    >
-                      Log Out
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 }

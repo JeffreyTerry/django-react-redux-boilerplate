@@ -1,19 +1,22 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 import './HowItWorks.scss';
 
 const HowItWorks = () => {
-  return <div id='how-it-works-container' className='row'>
-    <div className='col-10 offset-1 col-md-12 offset-md-0'>
-      <div className='row'>
-        <div id='how-it-works-title' className='col-10 offset-1 col-md-8 offset-md-2 text-center'>How it works</div>
-      </div>
-      <div className='row'>
-        <div className='col-12 col-md-10 offset-md-1'>
+  return <Row id='how-it-works-container'>
+    <Col xs={{ span: 10, offset: 1 }} md={{ span: 12, offset: 0 }}>
+      <Row>
+        <Col id='how-it-works-title' className='text-center' xs={{ span: 10, offset: 1 }} md={{ span: 8, offset: 2 }} >
+          How it works
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={{ span: 10, offset: 1 }} md={{ span: 10, offset: 1 }}>
           It works like this...
-        </div>
-      </div>
-    </div>
-  </div>
+        </Col>
+      </Row>
+    </Col>
+  </Row>
 }
 
 export default HowItWorks;

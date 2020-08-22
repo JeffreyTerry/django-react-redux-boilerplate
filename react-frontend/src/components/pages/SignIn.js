@@ -1,31 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 import GoogleSignInButton from '../common/GoogleSignInButton';
 import './SignIn.scss';
-import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   return (
-    <div id='signin-page-container' className='container-fluid min-height-page-container'>
+    <Container fluid id='signin-page-container' className='min-height-page-container'>
       <Helmet>
         <title>Sign In</title>
       </Helmet>
-      <header className='row'>
-        <div className='col-12 text-center col-sm-10 offset-sm-1 col-lg-8 offset-lg-2'>
+      <Row as='header'>
+        <Col xs={12} sm={{ span: 10, offset: 1 }} lg={{ span: 8, offset: 2 }} className='text-center'>
           <div className='signin-page-title'>Sign in to get started</div>
-        </div>
-      </header>
-      <div className='row primary-btn-container'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='primary-btn-container'>
+        <Col>
           <GoogleSignInButton text='Sign in with Google' url='/login/google-oauth2/' />
-        </div>
-      </div>
-      <div className='row text-center secondary-btn-container'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='text-center secondary-btn-container'>
+        <Col>
           <Link to='/demo'>Using a demo account? Sign in here instead.</Link>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

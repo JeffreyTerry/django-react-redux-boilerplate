@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import './HelpCenter.scss';
 import { printDurationPretty } from '../../assets/utils/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
+import { Container, Row, Col } from 'react-bootstrap';
+import './HelpCenter.scss';
 
 const overviewHelpVideos = [
   {
@@ -83,17 +84,17 @@ const frequentlyAskedQuestions = [
 ];
 
 const getVideoRow = video => {
-  return <div className='row help-video-row mx-0'>
-    <div className='col-9 col-md-10'>
+  return <Row className='help-video-row mx-0'>
+    <Col xs={9} md={10}>
       <FontAwesomeIcon icon={faPlayCircle} className='help-video-icon' />
       <span className='help-video-title'>
         {video.title}
       </span>
-    </div>
-    <div className='col-3 col-md-2'>
+    </Col>
+    <Col xs={3} md={2}>
       {printDurationPretty(video.duration)}
-    </div>
-  </div>
+    </Col>
+  </Row>
 }
 
 const HelpCenter = () => {
@@ -102,39 +103,39 @@ const HelpCenter = () => {
 
   const getFAQRow = question => {
     return <>
-      <div className='row help-faq-row mx-0' onClick={() => { openQuestionId === question.id ? setOpenQuestionId(undefined) : setOpenQuestionId(question.id) }} >
-        <div className='col-12'>
+      <Row className='help-faq-row mx-0' onClick={() => { openQuestionId === question.id ? setOpenQuestionId(undefined) : setOpenQuestionId(question.id) }} >
+        <Col>
           <span className='help-faq-question'>
             <span className='icon'>Q.</span>
             <span className='text'>{question.question}</span>
           </span>
-        </div>
-      </div>
+        </Col>
+      </Row>
       {question.id === openQuestionId &&
-        <div className='row mt-1 mb-3 mx-0'>
-          <div className='col-12 px-5'>
+        <Row className='mt-1 mb-3 mx-0'>
+          <Col className='px-5'>
             <span className='help-faq-answer'>
               <span className='icon'>A.</span>
               <span className='text'>{question.answer}</span>
             </span>
-          </div>
-        </div>
+          </Col>
+        </Row>
       }
     </>
   }
 
   return <>
-    <div id='help-page-container' className='container-fluid'>
+    <Container fluid id='help-page-container'>
       <Helmet>
         <title>Help Center</title>
       </Helmet>
-      <div className='row mt-5'>
-        <div className='col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'>
-          <div className='row border-bottom-light'>
-            <header className='col-12 col-sm-7 col-md-8 h2'>
+      <Row className='mt-5'>
+        <Col xs={12} sm={{ span: 10, offset: 1 }} lg={{ span: 8, offset: 2 }} xl={{ span: 6, offset: 3 }}>
+          <Row className='border-bottom-light'>
+            <Col as='header' xs={12} sm={7} md={8} className='h2'>
               Help&nbsp;Center
-            </header>
-            <div className='col-12 col-sm-5 col-md-4 mb-3 mt-3 mt-sm-0'>
+            </Col>
+            <Col xs={12} sm={5} md={4} className='mb-3 mt-3 mt-sm-0'>
               <input
                 value={searchText}
                 type='text'
@@ -142,45 +143,45 @@ const HelpCenter = () => {
                 className='form-control myapp-input-primary thick help-center-search-input'
                 placeholder='Search'
               />
-            </div>
-          </div>
-          <div className='row mt-2'>
-            <div className='col-12'>
-              <div className='row mr-0'>
-                <div className='col-9 col-md-10 help-center-subheader'>
+            </Col>
+          </Row>
+          <Row className='mt-2'>
+            <Col>
+              <Row className='mr-0'>
+                <Col xs={9} md={10} className='help-center-subheader'>
                   Overview
-                </div>
-                <div className='col-3 col-md-2 help-center-subheader'>
+                </Col>
+                <Col xs={3} md={2} className='help-center-subheader'>
                   Duration
-                </div>
-              </div>
+                </Col>
+              </Row>
               {overviewHelpVideos.map(getVideoRow)}
 
-              <div className='row'>
-                <div className='col-12 help-center-subheader'>
+              <Row>
+                <Col className='help-center-subheader'>
                   Student Features
-                </div>
-              </div>
+                </Col>
+              </Row>
               {studentHelpVideos.map(getVideoRow)}
 
-              <div className='row'>
-                <div className='col-12 help-center-subheader'>
+              <Row>
+                <Col className='help-center-subheader'>
                   Instructor Features
-                </div>
-              </div>
+                </Col>
+              </Row>
               {instructorHelpVideos.map(getVideoRow)}
 
-              <div className='row'>
-                <div className='col-12 help-center-subheader'>
+              <Row>
+                <Col className='help-center-subheader'>
                   Frequently Asked Questions
-                </div>
-              </div>
+                </Col>
+              </Row>
               {frequentlyAskedQuestions.map(getFAQRow)}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   </>
 }
 

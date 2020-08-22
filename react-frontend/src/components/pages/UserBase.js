@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { useRouteMatch } from 'react-router';
+import { Container, Row, Col } from 'react-bootstrap';
 import UserNavbar from '../layout/UserNavbar';
 import HelpCenter from './HelpCenter';
 import './UserBase.scss';
@@ -10,18 +11,18 @@ const UserBase = () => {
   let { path } = useRouteMatch();
 
   return (
-    <div id='user-page-container' className='container-fluid' >
-      <div className='row'>
+    <Container fluid id='user-page-container'>
+      <Row>
         <UserNavbar />
-        <div className='col inner-page-container'>
-          <div className='row'>
+        <Col className='inner-page-container'>
+          <Row>
             <Switch>
               <Route exact path={`${path}/help`} component={HelpCenter} />
             </Switch>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './App.scss';  // Goes before AppRoutes and other components so that the stylesheets cascade correctly.
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { initializeGoogleAnalytics } from './assets/utils/GoogleAnalytics';
@@ -6,7 +7,6 @@ import { myappSummaryLong } from './assets/constants/constants';
 import { getCookie } from 'react-use-cookie';
 import { useDispatch } from 'react-redux';
 import { fetchUser } from './redux/features/user/userSlice';
-import './App.scss';  // Goes before AppRoutes and other components (so that the stylesheets cascade correctly)
 import AppRoutes from './routes/routes';
 import ScrollToTop from './routes/ScrollToTop';
 import Navbar from './components/layout/Navbar';

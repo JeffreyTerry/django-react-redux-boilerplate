@@ -1,5 +1,6 @@
 import React from 'react';
 import { isPlainObject } from 'lodash';
+import { Image } from 'react-bootstrap';
 
 export const DynamicImageImport = require.context('../../assets/imgs', true);
 
@@ -26,11 +27,11 @@ const ModernImage = ({ src, alt = '', ...props }) => {
       }
       {/* Ancient browsers */}
       <source srcSet={src.png} type='image/png' />
-      <img src={src.png} alt={alt} {...props} />
+      <Image src={src.png} alt={alt} {...props} />
     </picture>
   } else {
     // I.e. src is actually just a single image.
-    return <img src={src} alt={alt} {...props} />
+    return <Image src={src} alt={alt} {...props} />
   }
 }
 

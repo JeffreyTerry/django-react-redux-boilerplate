@@ -1,18 +1,19 @@
 import React from 'react';
 import UserNavbar from './UserNavbar';
 import { useLocation } from 'react-router';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const LoadingPage = () => {
   const location = useLocation();
 
-  return <div id='loading-page-container' className='container-fluid'>
-    <div className='row'>
+  return <Container fluid id='loading-page-container'>
+    <Row>
       {location.pathname.startsWith('/user') &&
         <UserNavbar />
       }
-      <div className='inner-page-container min-height-page-container col'></div>
-    </div>
-  </div>
+      <Col className='inner-page-container min-height-page-container'></Col>
+    </Row>
+  </Container>
 }
 
 export default LoadingPage;

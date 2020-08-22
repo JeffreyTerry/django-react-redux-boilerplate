@@ -1,33 +1,34 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import { Row, Col } from 'react-bootstrap';
 import ModernImage from '../../common/ModernImage';
 import './Testimonial.scss';
 
 const Testimonial = ({ name, organization, quote, photo, photoAlt }) => {
   return (
-    <div className='testimonial-container shadow row py-4'>
-      <div className='col-12'>
-        <div className='row'>
-          <div className='col-12'>
+    <Row className='testimonial-container shadow py-4'>
+      <Col>
+        <Row>
+          <Col>
             <ModernImage className='testimonial-photo' src={photo} alt={photoAlt} />
-          </div>
-        </div>
+          </Col>
+        </Row>
 
-        <div className='row'>
-          <div className='col-12 testimonial-source my-3'>
+        <Row>
+          <Col className='testimonial-source my-3'>
             {name}{organization ? ', ' + organization : ''}
-          </div>
-        </div>
+          </Col>
+        </Row>
 
-        <div className='row'>
-          <div className='col-12'>
+        <Row>
+          <Col>
             <div className='divider'></div>
-          </div>
-        </div>
+          </Col>
+        </Row>
 
-        <div className='row'>
-          <div className='col-12 testimonial-quote my-3'>
+        <Row>
+          <Col className='testimonial-quote my-3'>
             <div className='quote-icon begin' aria-label='Begin quote'>
               <FontAwesomeIcon icon={faQuoteLeft} />
             </div>
@@ -35,10 +36,10 @@ const Testimonial = ({ name, organization, quote, photo, photoAlt }) => {
             <div className='quote-icon end' aria-label='End quote'>
               <FontAwesomeIcon icon={faQuoteRight} />
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Row>
+      </Col>
+    </Row>
   )
 }
 

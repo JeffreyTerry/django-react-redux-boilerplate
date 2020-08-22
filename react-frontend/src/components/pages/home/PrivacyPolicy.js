@@ -1,17 +1,18 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './PrivacyPolicy.scss';
 
 const PrivacyPolicy = () => {
-  return <div id='privacy-container' className='row'>
-    <div id='privacy' className='col-10 offset-1 col-md-10 offset-md-1'>
-      <div className='row'>
-        <div id='privacy-title' className='col-10 offset-1 text-center'>
+  return <Row id='privacy-container'>
+    <Col id='privacy' xs={{ span: 10, offset: 1 }}>
+      <Row>
+        <Col xs={12} sm={{ span: 10, offset: 1 }} id='privacy-title' className='text-center'>
           Privacy
-        </div>
-      </div>
-      <div className='row mt-4'>
-        <div id='privacy-description' className='col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 text-left'>
+        </Col>
+      </Row>
+      <Row className='mt-4'>
+        <Col id='privacy-description' className='text-left' xs={12} md={{ span: 10, offset: 1 }} xl={{ span: 8, offset: 2 }}>
           <div>
             My App takes privacy seriously. To this end, it only stores information necessary for making the site functional, and your data is (obviously) never sold to third parties. The information My App does store falls into three categories: 1) account information, 2) information you create by using the site, and 3) anonymized general usage information.
             <ol className='mt-3'>
@@ -32,10 +33,10 @@ const PrivacyPolicy = () => {
           <p>
             Finally, to give users the utmost control over their data, My App allows users to delete their account at any time. Doing so purges all information and files associated with the deleted account from My App's servers. In addition to this privacy notice, which gives a specific picture of how My App handles user data, you can find My App's full legal policy <Link to='/legal'>here</Link> (if you're a lawyer, you'll love this page!).
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
+        </Col>
+      </Row>
+    </Col>
+  </Row>
 }
 
 export default PrivacyPolicy;

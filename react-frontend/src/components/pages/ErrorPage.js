@@ -1,27 +1,28 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Container, Row, Col } from 'react-bootstrap';
 import './ErrorPage.scss';
 
 function ErrorPage() {
   return (
-    <div id='error-page-container' className='container-fluid min-height-page-container'>
+    <Container fluid id='error-page-container' className='min-height-page-container'>
       <Helmet>
         <title>404 Error</title>
       </Helmet>
-      <div className='row text-center mt-5'>
-        <div className='col-12 mt-5'>
+      <Row className='text-center mt-5'>
+        <Col className='mt-5'>
           <div className='h1'>Page Not Found</div>
-        </div>
-      </div>
-      <div className='row text-center'>
-        <div className='col-12'>
+        </Col>
+      </Row>
+      <Row className='text-center'>
+        <Col>
           <div className='huge-icon'>
             {/* <FontAwesomeIcon icon={faExclamationCircle} /> */}
             404
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

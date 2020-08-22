@@ -1,15 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Container, Row, Col } from 'react-bootstrap';
 import './Legal.scss';
 
 const Legal = () => {
   return <>
-    <div id='legal-page-container' className='container-fluid'>
+    <Container fluid id='legal-page-container'>
       <Helmet>
         <title>Privacy Notice</title>
       </Helmet>
-      <div className='row'>
-        <div className='col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3'>
+      <Row>
+        <Col xs={12} sm={{ span: 10, offset: 1 }} md={{ span: 8, offset: 2 }} xl={{ span: 6, offset: 3 }}>
           <div className='legal-page-body'>
             <div className='legal-page-title'><strong>PRIVACY NOTICE</strong></div>
             <p><strong><span className='legal-page-subtitle'>Last updated July 14, 2020</span></strong></p>
@@ -309,9 +310,9 @@ const Legal = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   </>
 }
 
