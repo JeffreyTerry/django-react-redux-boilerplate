@@ -1,4 +1,4 @@
-# Docker Django React Redux Bootstrap Boilerplate
+# Docker-Django-React-Redux-Bootstrap Boilerplate
 A boilerplate full-stack web application that uses Docker, Django, React, Redux, and React-Bootstrap.
 Additional built-in technologies include Django Rest Framework and Python Social Auth on the backend, and Axios, Formik, Lodash, Luxor, Tippy, and Uppy on the frontend.
 
