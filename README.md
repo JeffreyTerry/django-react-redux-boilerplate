@@ -65,7 +65,7 @@ During production, this project uses Nginx to serve the Django backend, which se
 
 ## 1. Django Server (`backend`)
 The Django Server is a basic Django server written to do two things:
-1. Serve the React frontend.
+1. Serve the static React frontend.
 2. Provide an API to support the frontend.
 
 The file structure follows standard Django naming practices. The tests can be found in the individual app directories under `tests.py`. I may split these up and move them to their own folders in the same directories if they become big enough.
