@@ -1,0 +1,52 @@
+# THIS IS THE DOCKER-COMPOSE FILE FOR DEVELOPMENT
+# For development, the backend proxies all frontend requests
+# to the frontend container running on port 3000. This setup
+# enables fast live reloading and allows me to develop
+# frontend-specific features using http://localhost:3000.
+version: '3.7'
+
+services:
+  my_app_db:
+    container_name: my_app_db
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      ./myapp.env
+    ports:
+      - 5432:5432
+  my_app_backend:
+    container_name: my_app_backend
+    build:
+      context: .
+      target: dev
+    command: python /code/backend/manage.py runserver 0.0.0.0:8000 # --noreload #  # Add --noreload in order to use the VSCode debugger.
+    volumes:
+      - .:/code
+      - /code/backend/static
+    env_file:
+      ./myapp.env
+    ports:
+      - 8000:8000
+      - 5678:5678 # For VSCode debugging
+    depends_on:
+      - my_app_db
+      - my_app_frontend
+  my_app_frontend:
+    container_name: my_app_frontend
+    build:
+      context: ./react-frontend
+      dockerfile: Dockerfile
+    command: npm start
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 3000:3000
+    volumes:
+      - ./react-frontend:/my_app_frontend
+      # Exclude the node_modules folder
+      - /my_app_frontend/node_modules
+
+volumes:
+  postgres_data:
+  my_app_frontend:

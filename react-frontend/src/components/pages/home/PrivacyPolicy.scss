@@ -1,0 +1,46 @@
+@import "../../../assets/styles/_colors.scss";
+
+#privacy-title {
+  font-size: 36px;
+}
+
+#privacy-container {
+  color: $theme-primary-color;
+  background-color: $background-color-alt;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+#privacy-description {
+  font-size: 17px;
+}
+
+#privacy-description p {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  #privacy-title {
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 768px) {
+  #privacy-title {
+    font-size: 64px;
+  }
+
+  #privacy-container {
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  #privacy-title {
+    font-size: 74px;
+  }
+
+  #privacy-container {
+    padding-bottom: 100px;
+  }
+}

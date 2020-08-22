@@ -1,0 +1,27 @@
+@import "../../assets/styles/_colors.scss";
+@import "../../assets/styles/_sizes.scss";
+
+.video {
+  // background-color: $background-color;
+  // background-color: $theme-secondary-color;
+  border-radius: 4px;
+}
+
+// Kudos to https://themeskills.com/make-embedded-youtube-videos-responsive-wordpress/ for this trick
+.video-container > div {
+  position: relative;
+  padding-bottom: 46.085%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container > div iframe,
+.video-container > div object,
+.video-container > div embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

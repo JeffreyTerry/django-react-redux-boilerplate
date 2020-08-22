@@ -1,0 +1,38 @@
+@import "../../assets/styles/_colors.scss";
+
+.tippy-box[data-theme~="myapp-jumbo"],
+.tippy-box[data-theme~="myapp"] {
+    background-color: $theme-secondary-color;
+    color: $background-color;
+    border-radius: 4px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+}
+
+.tippy-box[data-theme~="myapp"] {
+    padding: 5px 16px;
+}
+
+.tippy-box[data-theme~="myapp-jumbo"] {
+    padding: 8px 16px;
+    font-size: 18px;
+}
+
+.tippy-box[data-theme~="myapp-jumbo"] > .tippy-arrow,
+.tippy-box[data-theme~="myapp"] > .tippy-arrow {
+    color: $theme-secondary-color;
+}
+
+.tippy-box[data-theme~="myapp-jumbo-inverted"],
+.tippy-box[data-theme~="myapp-inverted"] {
+    background-color: $background-color;
+    color: $theme-secondary-color;
+    padding: 5px 16px;
+    border-radius: 4px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+}
+.tippy-box[data-theme~="myapp-jumbo-inverted"] > .tippy-arrow,
+.tippy-box[data-theme~="myapp-inverted"] > .tippy-arrow {
+    color: $background-color;
+}

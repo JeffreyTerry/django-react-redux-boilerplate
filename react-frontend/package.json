@@ -1,0 +1,72 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@reduxjs/toolkit": "^1.2.5",
+    "@tippyjs/react": "^4.1.0",
+    "@uppy/core": "^1.11.0",
+    "@uppy/react": "^1.8.1",
+    "@uppy/xhr-upload": "^1.6.0",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "copy-to-clipboard": "^3.3.1",
+    "formik": "^2.1.5",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.19",
+    "luxon": "^1.24.1",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.0",
+    "react-datepicker": "^3.0.0",
+    "react-dnd": "^10.0.2",
+    "react-dnd-html5-backend": "^10.0.2",
+    "react-dom": "^16.13.0",
+    "react-ga": "^2.7.0",
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.3",
+    "react-select": "^3.1.0",
+    "react-use-cookie": "^1.1.0",
+    "react-youtube": "^7.9.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "yup": "^0.29.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "sitemap": "babel-node ./src/sitemapGenerator.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "react-router": "^5.1.2",
+    "react-router-sitemap": "^1.2.0"
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../assets/styles/_colors.scss";
+@import "../../assets/styles/_sizes.scss";
+
+.user-nav {
+  background-color: $theme-primary-color;
+  flex: 0 0 $user-navbar-width;
+  max-width: $user-navbar-width;
+  position: relative;
+  width: 100%;
+  padding-top: 0;
+  text-align: center;
+}
+
+.user-nav > nav {
+  position: fixed;
+  width: $user-navbar-width;
+}
+
+a.user-nav-btn {
+  color: $background-color;
+  width: 100%;
+  font-weight: 600;
+  padding: 15px 0 9px;
+  cursor: pointer;
+}
+
+a.user-nav-btn:hover,
+a.user-nav-btn.active {
+  color: $theme-primary-color;
+  background-color: $background-color;
+}
+
+a.user-nav-btn > .icon {
+  font-size: 24px;
+}
+
+a.user-nav-btn > .text {
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+}
+
+a.user-help-nav-btn > .text {
+  font-size: 13px;
+}
+
+@media (min-height: 400px) {
+  .user-nav {
+    padding-top: 5vh;
+  }
+}
+
+@media (min-height: 500px) {
+  .user-nav {
+    padding-top: 10vh;
+  }
+}
+
+@media (min-height: 600px) {
+  .user-nav {
+    padding-top: 15vh;
+  }
+}

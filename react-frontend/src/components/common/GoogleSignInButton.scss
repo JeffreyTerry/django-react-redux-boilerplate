@@ -1,0 +1,53 @@
+// Google sign in button stuff //
+// These styles come from Google's official branding guidelines at https://developers.google.com/identity/branding-guidelines.
+
+#gbtn-container {
+  height: 40px;
+  width: 230px;
+}
+
+#gbtn {
+  color: white;
+  background-color: #4285f4;
+  height: 40px;
+  width: 230px;
+  text-align: center;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: "Roboto", arial, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#gbtn:hover {
+  background-color: #3367d6;
+}
+
+#gbtn-icon {
+  display: block;
+  float: left;
+  padding: 10px;
+  border: 1px solid #4285f4;
+  border-radius: 1px;
+  background-color: white;
+}
+
+#gbtn-image-wrapper {
+  height: 18px;
+  width: 18px;
+}
+
+#gbtn-svg {
+  vertical-align: top;
+}
+
+#gbtn-content {
+  line-height: 40px;
+  vertical-align: top;
+}
+
+#gbtn-error-message,
+#gbtn-success-message {
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}

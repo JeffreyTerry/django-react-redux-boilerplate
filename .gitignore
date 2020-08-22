@@ -1,0 +1,14 @@
+*.DS_Store
+*.pyc
+*.rdb
+*.swp
+*.swo
+*.log
+__pycache__
+
+.coverage
+.vscode/settings.json
+
+myapp.env
+static
+htmlcov

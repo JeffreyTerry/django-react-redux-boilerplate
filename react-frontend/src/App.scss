@@ -1,0 +1,457 @@
+@import "./assets/styles/_colors.scss";
+@import "./assets/styles/_sizes.scss";
+
+.App {
+  padding-top: $navbar-height;
+  color: $theme-primary-color;
+}
+
+.border-bottom-light {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); //$theme-primary-color-faint;
+}
+
+.inline-link {
+  text-decoration: underline;
+}
+
+button {
+  background-color: unset;
+  border: unset;
+  padding: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $theme-primary-color;
+}
+
+.modal-content {
+  background-color: $background-color;
+}
+
+// Use this utility class to make sure a page fills the available vertical space
+.min-height-page-container {
+  min-height: calc(100vh - #{$navbar-height} - 168px);
+}
+
+@media (min-width: 992px) {
+  .min-height-page-container {
+    min-height: calc(100vh - #{$navbar-height} - 120px);
+  }
+}
+
+// Add this utility class to a div to create a divider.
+.divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 4px 12px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//// BEGIN CUSTOM CHECKBOX STYLING ////
+.myapp-form-check {
+  background-color: $theme-secondary-color;
+  border-radius: 4px;
+  padding: 7px 10px 7px 38px;
+}
+
+.myapp-form-check ~ .myapp-form-check {
+  margin-top: 0.5rem;
+}
+
+.myapp-form-check,
+.myapp-form-check > * {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.myapp-form-check > input {
+  display: none;
+}
+
+.myapp-form-check > label {
+  display: inline-block;
+  position: relative;
+}
+
+.myapp-form-check > label:before {
+  color: $background-color;
+  background-color: $background-color;
+  border: 3px solid $background-color;
+  border-radius: 4px;
+  width: 17px;
+  height: 17px;
+  padding-left: 2px;
+  font-size: 19px;
+  position: absolute;
+  top: 5px;
+  left: -26px;
+  content: " ";
+}
+
+.myapp-form-check > input:checked + label:before {
+  background-color: $theme-primary-color;
+}
+
+.myapp-form-check > input:checked + label:before {
+  content: "\2714";
+  background-color: $theme-secondary-color;
+  border: 1px solid $theme-secondary-color;
+  top: -1px;
+  left: -28px;
+}
+//// END CUSTOM CHECKBOX STYLING ////
+
+.myapp-link {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.myapp-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.myapp-input-error {
+  color: $failure-color;
+  font-size: 0.9rem;
+  margin-top: 3px;
+  text-align: center;
+}
+
+.myapp-input {
+  color: $theme-secondary-color !important;
+  font-weight: 600;
+}
+
+.myapp-input:not(.sections-select):not(.general-select):not(.subject-select),
+.myapp-input > div.select__control {
+  border: 1px solid $theme-secondary-color !important;
+  border-top-color: $theme-secondary-color !important;
+  border-bottom-color: $theme-secondary-color !important;
+  border-left-color: $theme-secondary-color !important;
+  border-right-color: $theme-secondary-color !important;
+}
+
+.myapp-input.thick,
+.myapp-input.thick > div.select__control {
+  border-width: 2px !important;
+}
+
+.myapp-input-primary {
+  border: 1px solid $theme-terciary-color !important;
+  border-top-color: $theme-terciary-color !important;
+  border-bottom-color: $theme-terciary-color !important;
+  border-left-color: $theme-terciary-color !important;
+  border-right-color: $theme-terciary-color !important;
+  color: $theme-terciary-color !important;
+  font-weight: 600;
+}
+
+.myapp-input-primary.thick,
+.myapp-input-primary.thick > div.select__control {
+  border-width: 2px !important;
+}
+
+.myapp-btn {
+  border: 1px solid $theme-secondary-color;
+  background-color: $theme-secondary-color;
+  color: $background-color;
+  font-weight: 600;
+}
+
+.myapp-btn-inverted {
+  border: 1px solid $theme-secondary-color;
+  background-color: $background-color;
+  color: $theme-secondary-color;
+  font-weight: 600;
+}
+
+.myapp-btn-primary {
+  border: 1px solid $theme-primary-color;
+  background-color: $theme-primary-color;
+  color: $background-color;
+  font-weight: 600;
+}
+
+.myapp-btn-primary-inverted {
+  border: 1px solid $theme-primary-color;
+  background-color: $background-color;
+  color: $theme-primary-color;
+  font-weight: 600;
+}
+
+.myapp-btn-primary-light {
+  border: 1px solid $theme-terciary-color;
+  background-color: $theme-terciary-color;
+  color: $background-color;
+  font-weight: 600;
+}
+
+.myapp-btn-primary-light-inverted {
+  border: 1px solid $theme-terciary-color;
+  background-color: $background-color;
+  color: $theme-terciary-color;
+  font-weight: 600;
+}
+
+.myapp-btn-danger {
+  border: 1px solid $bad-color;
+  background-color: $bad-color;
+  color: $background-color;
+  font-weight: 600;
+}
+
+.myapp-btn-cancel {
+  color: $theme-primary-color;
+  cursor: pointer;
+}
+
+.myapp-btn-cancel.light {
+  color: $background-color;
+}
+
+.myapp-btn:hover {
+  color: $theme-secondary-color;
+  background-color: $background-color;
+}
+
+.myapp-btn-inverted:hover {
+  color: $background-color;
+  background-color: $theme-secondary-color;
+}
+
+.myapp-btn-primary:hover {
+  color: $theme-primary-color;
+  background-color: $background-color;
+}
+
+.myapp-btn-primary-inverted:hover {
+  color: $background-color;
+  background-color: $theme-primary-color;
+}
+
+.myapp-btn-primary-light:hover {
+  color: $theme-terciary-color;
+  background-color: $background-color;
+}
+
+.myapp-btn-cancel:hover {
+  color: $theme-primary-color-faint;
+}
+
+.myapp-btn-cancel.light:hover {
+  color: $background-color-dark;
+}
+
+.myapp-btn-primary-light-inverted:hover {
+  color: $background-color;
+  background-color: $theme-terciary-color;
+}
+
+.myapp-btn-danger:hover {
+  color: $bad-color;
+  background-color: $background-color;
+}
+
+.myapp-btn.thick,
+.myapp-btn-inverted.thick,
+.myapp-btn-primary.thick,
+.myapp-btn-primary-inverted.thick,
+.myapp-btn-primary-light.thick,
+.myapp-btn-primary-light-inverted.thick,
+.myapp-btn-danger.thick,
+.no-focus-btn.thick {
+  border-width: 2px;
+}
+
+.myapp-btn.form-control:focus {
+  color: $theme-secondary-color;
+}
+
+.myapp-btn-primary-light.form-control:focus {
+  color: $theme-terciary-color;
+}
+
+.myapp-btn-primary.form-control:focus {
+  color: $theme-primary-color;
+}
+
+.myapp-input:focus,
+.myapp-input-primary:focus,
+.react-datepicker-wrapper input:focus,
+:not(.badge-form-check):not(.badge-form-check-primary) > label:focus,
+.myapp-btn-cancel:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.badge-form-check:focus,
+.badge-form-check-primary:focus,
+select.myapp-input:focus,
+select.myapp-input-primary:focus,
+select.myapp-input > div.select__control:focus,
+select.myapp-input-primary > div.select__control:focus,
+.myapp-btn:not(.myapp-btn-cancel):focus,
+.myapp-btn-inverted:focus,
+.myapp-btn-primary:focus,
+.myapp-btn-primary-inverted:focus,
+.myapp-btn-primary-light:focus,
+.myapp-btn-primary-light-inverted:focus,
+.myapp-btn-danger:focus,
+.no-focus-btn:focus,
+span:focus,
+button:not(.myapp-btn-cancel):not(.clickable-image-wrapper):focus,
+div:not(.myapp-btn-cancel):not(.badge-form-check):focus,
+svg:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline-offset: 1px;
+  outline-style: auto;
+  outline-width: 1px;
+  outline-color: $theme-terciary-color;
+  border-radius: 0;
+}
+
+:not(.badge-form-check):not(.badge-form-check-primary) > label:focus,
+.myapp-btn-cancel:focus {
+  text-decoration: underline;
+}
+
+.badge-form-check:focus {
+  outline-color: $theme-secondary-color;
+}
+
+a:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline-style: auto;
+  outline-width: 1px;
+  outline-color: $theme-terciary-color;
+  outline-offset: 0px;
+}
+
+.myapp-btn-inverted:focus {
+  border-color: $theme-secondary-color;
+}
+
+.myapp-btn-primary:focus,
+.myapp-btn-primary-inverted:focus {
+  border-color: $theme-primary-color;
+}
+
+.myapp-btn-primary-light:focus,
+.myapp-btn-primary-light-inverted:focus {
+  border-color: $theme-terciary-color;
+}
+
+.myapp-btn-danger:focus {
+  border-color: $bad-color;
+}
+
+.no-focus-btn:focus {
+  border-color: inherit;
+}
+
+// Change the default color of input placeholder text.
+.myapp-input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: $theme-secondary-color-faint;
+}
+.myapp-input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $theme-secondary-color-faint;
+  opacity: 1;
+}
+.myapp-input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $theme-secondary-color-faint;
+  opacity: 1;
+}
+.myapp-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $theme-secondary-color-faint;
+}
+.myapp-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $theme-secondary-color-faint;
+}
+
+.myapp-input::placeholder {
+  /* Most modern browsers support this now. */
+  color: $theme-secondary-color-faint;
+}
+
+// Change the color of input placeholder text for .myapp-input-primary elements.
+.myapp-input-primary::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: $theme-terciary-color-faint;
+}
+.myapp-input-primary:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $theme-terciary-color-faint;
+  opacity: 1;
+}
+.myapp-input-primary::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $theme-terciary-color-faint;
+  opacity: 1;
+}
+.myapp-input-primary:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $theme-terciary-color-faint;
+}
+.myapp-input-primary::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $theme-terciary-color-faint;
+}
+.myapp-input-primary::placeholder {
+  /* Most modern browsers support this now. */
+  color: $theme-terciary-color-faint;
+}
+
+a.unset-link-styling {
+  display: block;
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+// START overrides for react-select styling
+.myapp-input div.select__control {
+  min-height: 42px;
+  box-shadow: none;
+}
+
+.sections-select div.select__control {
+  cursor: text;
+}
+
+.myapp-input .select__clear-indicator,
+.myapp-input .select__multi-value__remove {
+  cursor: pointer;
+}
+// END overrides for react-select styling

@@ -1,0 +1,72 @@
+@import "../../../assets/styles/_colors.scss";
+@import "../../../assets/styles/_sizes.scss";
+
+.user-dropdown-wrapper {
+  position: fixed;
+  top: 36px;
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
+  z-index: 1031; // Needs to be more than 1030 (Bootstrap sets the z-index of the fixed navbar to 1030)
+}
+
+.user-dropdown {
+  background-color: $background-color;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 4px 0;
+  width: fit-content;
+  max-width: fit-content;
+  font-weight: 600;
+}
+
+.user-dropdown > div {
+  width: fit-content;
+}
+
+.user-dropdown > div > div {
+  width: 215px;
+}
+
+@media (min-width: 576px) {
+  .user-dropdown {
+    margin-right: 20px;
+  }
+
+  .user-dropdown-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.user-dropdown-header {
+  padding-top: 8px;
+  padding-bottom: 4px;
+  color: $theme-primary-color;
+}
+
+.user-dropdown-header,
+.user-dropdown-btn {
+  text-align: left;
+  width: 100%;
+  font-weight: 600;
+  padding-left: 36px;
+}
+
+.user-dropdown-btn {
+  color: $theme-primary-color;
+  font-size: 16px;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.user-dropdown-btn:hover {
+  background-color: $background-color-dark;
+}
+
+.user-dropdown-btn > .icon {
+  font-size: 15px;
+  margin-right: 10px;
+}

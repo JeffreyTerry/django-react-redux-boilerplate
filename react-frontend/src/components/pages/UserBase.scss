@@ -1,0 +1,23 @@
+@import "../../assets/styles/_colors.scss";
+@import "../../assets/styles/_sizes.scss";
+
+// Spacing for the UserNavbar
+@media (min-width: 768px) {
+  #user-page-container .inner-page-container {
+    max-width: calc(100% - #{$user-navbar-width});
+  }
+}
+
+#user-page-container .inner-page-container {
+  min-height: calc(100vh - #{$navbar-height} - 168px);
+}
+
+#user-page-container .inner-page-container > .row {
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  #user-page-container .inner-page-container {
+    min-height: calc(100vh - #{$navbar-height} - 120px);
+  }
+}

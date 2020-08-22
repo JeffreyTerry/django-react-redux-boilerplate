@@ -1,0 +1,62 @@
+@import "../../assets/styles/_colors.scss";
+@import "../../assets/styles/_sizes.scss";
+
+#help-page-container {
+  padding-bottom: 80px;
+}
+
+.help-center-subheader {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.help-faq-row,
+.help-video-row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.help-video-icon {
+  color: $theme-primary-color;
+  margin-right: 10px;
+}
+
+.help-video-title {
+  color: $theme-terciary-color;
+  font-weight: 600;
+}
+
+.help-faq-question {
+  font-weight: 600;
+}
+
+.help-faq-question > .icon {
+  margin-right: 10px;
+}
+
+.help-faq-question > .text {
+  color: $theme-terciary-color;
+}
+
+.help-faq-answer > .icon {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.help-faq-answer > .text {
+  font-weight: 400;
+  color: $theme-secondary-color;
+}
+
+.help-faq-row:hover,
+.help-faq-row:hover .icon,
+.help-faq-row:hover .text,
+.help-video-row:hover,
+.help-video-row:hover .help-video-icon,
+.help-video-row:hover .help-video-title {
+  background-color: $theme-terciary-color;
+  color: $background-color;
+}

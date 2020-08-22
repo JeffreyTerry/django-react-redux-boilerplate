@@ -1,0 +1,193 @@
+@import "../../assets/styles/_colors.scss";
+@import "../../assets/styles/_sizes.scss";
+
+#myapp-navbar {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#myapp-navbar.navbar-light {
+  background-color: $background-color;
+  color: $theme-primary-color;
+}
+#myapp-navbar.navbar-dark {
+  background-color: $theme-primary-color;
+  color: $background-color;
+}
+
+#navbar-logo {
+  vertical-align: top;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+#navbar-title {
+  line-height: 30px;
+  font-size: 30px;
+  // TODO add a custom, themed font
+  font-family: "Kalam";
+}
+
+#navbar-links {
+  flex-direction: row;
+}
+
+.navbar-light #navbar-logo,
+.navbar-light #navbar-title {
+  color: $theme-primary-color;
+}
+
+#user-name-container {
+  position: relative;
+  display: inline-block;
+}
+
+#user-name-container > div {
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  top: -21px;
+  right: 8px;
+  white-space: nowrap;
+}
+
+#user-icon-container {
+  padding-top: 7px;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+#user-icon-container > svg {
+  width: 24px;
+  height: 24px;
+}
+
+#navbar-sign-in-btn:hover {
+  color: inherit;
+}
+
+.navbar-dark #navbar-sign-in-btn > a {
+  color: $background-color;
+}
+
+.navbar-light #navbar-sign-in-btn {
+  color: $background-color;
+  background-color: $theme-primary-color;
+}
+
+.navbar-light #navbar-sign-in-btn:hover {
+  background-color: $background-color;
+  color: $theme-primary-color;
+}
+
+////// Begin Compact Styling //////
+
+#myapp-navbar.compact {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: unset;
+}
+
+#myapp-navbar.compact #navbar-logo {
+  vertical-align: top;
+  line-height: 20px;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+#myapp-navbar.compact #navbar-title {
+  line-height: 22px;
+  font-size: 22px;
+}
+
+#myapp-navbar.compact #navbar-demo-btn > a {
+  line-height: 14px;
+}
+
+#myapp-navbar.compact #navbar-sign-in-btn {
+  padding: 8px 5px;
+  font-weight: 600;
+}
+
+////// End Compact Styling //////
+
+////// Begin Responsive Styling //////
+.verbose-navbar-links {
+  font-size: 13px;
+}
+
+#navbar-demo-btn > a {
+  color: inherit;
+  line-height: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+#navbar-sign-in-btn {
+  border: 1px solid $theme-primary-color;
+  border-radius: 3px;
+  padding: 6px 14px;
+  font-weight: 600;
+}
+
+@media (min-width: 420px) {
+  .verbose-navbar-links {
+    font-size: inherit;
+  }
+
+  #navbar-demo-btn > a {
+    line-height: 26px;
+    margin-right: 1rem;
+  }
+
+  #navbar-sign-in-btn {
+    padding: 8px 25px;
+  }
+}
+
+@media (min-width: 576px) {
+  #myapp-navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #navbar-logo {
+    line-height: 26px;
+    font-size: 26px;
+  }
+
+  #navbar-title {
+    line-height: 34px;
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 768px) {
+  #navbar-logo {
+    line-height: 28px;
+    font-size: 28px;
+  }
+
+  #navbar-title {
+    line-height: 32px;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  #myapp-navbar {
+    min-height: $navbar-height;
+  }
+
+  #navbar-logo {
+    line-height: 32px;
+    font-size: 32px;
+  }
+
+  #navbar-title {
+    line-height: 40px;
+    font-size: 50px;
+  }
+}
+
+////// End Responsive Styling //////

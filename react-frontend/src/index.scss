@@ -1,0 +1,11 @@
+@import './assets/styles/_colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto|Kalam|Montserrat:400,600&display=swap');
+
+body {
+  margin: 0;
+  // TODO add custom, themed fonts
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+}

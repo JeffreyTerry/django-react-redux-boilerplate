@@ -1,0 +1,38 @@
+@import "../../../assets/styles/_colors.scss";
+
+.testimonial-container {
+  cursor: default;
+  border-radius: 4px;
+}
+
+.testimonial-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.testimonial-source {
+  font-weight: 600;
+}
+
+.quote-icon {
+  color: $theme-primary-color-faint;
+  display: inline-block;
+}
+
+.quote-icon.begin {
+  padding-right: 8px;
+}
+
+.quote-icon.end {
+  padding-left: 8px;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}

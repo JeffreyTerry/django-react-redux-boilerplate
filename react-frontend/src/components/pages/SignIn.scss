@@ -1,0 +1,40 @@
+@import "../../assets/styles/_colors.scss";
+@import "../../assets/styles/_sizes.scss";
+
+#signin-page-container {
+  color: $theme-primary-color;
+  padding-top: 125px;
+  padding-bottom: 110px;
+}
+
+.primary-btn-container {
+  margin-top: 40px;
+}
+
+.secondary-btn-container {
+  color: $theme-primary-color;
+  margin-top: 35px;
+  font-size: 15px;
+}
+
+.signin-page-title {
+  font-size: 36px;
+}
+
+@media (min-width: 576px) {
+  .signin-page-title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 768px) {
+  .signin-page-title {
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 992px) {
+  .signin-page-title {
+    font-size: 50px;
+  }
+}

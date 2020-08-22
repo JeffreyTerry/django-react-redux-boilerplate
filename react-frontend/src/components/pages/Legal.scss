@@ -1,0 +1,49 @@
+@import "../../assets/styles/_colors.scss";
+@import "../../assets/styles/_sizes.scss";
+
+#legal-page-container {
+  padding-top: 65px;
+  padding-bottom: 80px;
+}
+
+.legal-page-body,
+.legal-page-body * {
+  background: transparent;
+}
+
+.legal-page-title,
+.legal-page-title * {
+  font-size: 3rem;
+}
+
+.legal-page-subtitle,
+.legal-page-subtitle * {
+  font-size: 14px;
+}
+
+.legal-page-heading_1,
+.legal-page-heading_1 * {
+  // I put a lot of padding here so that the page anchors
+  // are positioned correctly. I could probably achieve this
+  // effect more elegantly, but I'm lazy.
+  padding-top: 50px;
+  display: inline-block;
+  font-size: 19px;
+}
+
+.legal-page-heading_2,
+.legal-page-heading_2 * {
+  font-size: 17px;
+}
+
+.legal-page-body_text,
+.legal-page-body_text * {
+  font-size: 14px;
+}
+
+.legal-page-link,
+.legal-page-link * {
+  color: #3030f1;
+  font-size: 14px;
+  word-break: break-word;
+}

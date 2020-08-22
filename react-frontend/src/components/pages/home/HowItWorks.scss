@@ -1,0 +1,35 @@
+@import "../../../assets/styles/_colors.scss";
+@import "../../../assets/styles/_sizes.scss";
+
+#how-it-works-container {
+    background-color: $theme-primary-color;
+    color: $background-color;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+@media (min-width: 576px) {
+    #how-it-works-title {
+      font-size: 54px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    #how-it-works-title {
+      font-size: 64px;
+    }
+  
+    #how-it-works-container {
+      padding-bottom: 80px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    #how-it-works-title {
+      font-size: 74px;
+    }
+  
+    #how-it-works-container {
+      padding-bottom: 100px;
+    }
+  }
