@@ -14,11 +14,11 @@ import Footer from './components/layout/Footer';
 
 const App = () => {
   const dispatch = useDispatch();
-  const isAuthenticated = getCookie('isAuthenticated');
+  const isAuthenticated = getCookie('isAuthenticated') === 'true';
 
   // TODO make sure this code works as expected
   useEffect(() => {
-    if (isAuthenticated === 'true') {
+    if (isAuthenticated) {
       // ISAAC -- this is how you fetch stuff from the API
       // The way I've designed fetchUser means that it will fetch the user from
       // the backend API, then it will store the returned value in the

@@ -84,7 +84,7 @@ const frequentlyAskedQuestions = [
 ];
 
 const getVideoRow = video => {
-  return <Row className='help-video-row mx-0'>
+  return <Row className='help-video-row mx-0' key={`video-${video.id}`}>
     <Col xs={9} md={10}>
       <FontAwesomeIcon icon={faPlayCircle} className='help-video-icon' />
       <span className='help-video-title'>
@@ -102,26 +102,28 @@ const HelpCenter = () => {
   const [openQuestionId, setOpenQuestionId] = useState();
 
   const getFAQRow = question => {
-    return <>
-      <Row className='help-faq-row mx-0' onClick={() => { openQuestionId === question.id ? setOpenQuestionId(undefined) : setOpenQuestionId(question.id) }} >
-        <Col>
-          <span className='help-faq-question'>
-            <span className='icon'>Q.</span>
-            <span className='text'>{question.question}</span>
-          </span>
-        </Col>
-      </Row>
-      {question.id === openQuestionId &&
-        <Row className='mt-1 mb-3 mx-0'>
-          <Col className='px-5'>
-            <span className='help-faq-answer'>
-              <span className='icon'>A.</span>
-              <span className='text'>{question.answer}</span>
+    return <Row key={`faq-${question.id}`}>
+      <Col>
+        <Row className='help-faq-row mx-0' onClick={() => { openQuestionId === question.id ? setOpenQuestionId(undefined) : setOpenQuestionId(question.id) }} >
+          <Col>
+            <span className='help-faq-question'>
+              <span className='icon'>Q.</span>
+              <span className='text'>{question.question}</span>
             </span>
           </Col>
         </Row>
-      }
-    </>
+        {question.id === openQuestionId &&
+          <Row className='mt-1 mb-3 mx-0'>
+            <Col className='px-5'>
+              <span className='help-faq-answer'>
+                <span className='icon'>A.</span>
+                <span className='text'>{question.answer}</span>
+              </span>
+            </Col>
+          </Row>
+        }
+      </Col>
+    </Row>
   }
 
   return <>

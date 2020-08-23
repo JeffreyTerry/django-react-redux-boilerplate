@@ -12,7 +12,7 @@ const userSlice = createSlice({
   reducers: {
     fetchUser(state, action) {
       state.fetchUserError = false;
-      state.current = action.payload.user
+      state.current = action.payload
     },
     fetchUserFailure(state) {
       state.fetchUserError = true;

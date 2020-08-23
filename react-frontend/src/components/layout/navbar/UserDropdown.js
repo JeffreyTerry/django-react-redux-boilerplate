@@ -51,6 +51,11 @@ const UserDropdown = ({ onSelect }) => {
             </Row>
             <Row>
               <Col>
+                <div className='divider'></div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
                 <div
                   className='user-dropdown-btn user-dropdown-logout-btn no-select'
                   onClick={logout}

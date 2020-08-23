@@ -4,6 +4,7 @@ import { useRouteMatch } from 'react-router';
 import { Container, Row, Col } from 'react-bootstrap';
 import UserNavbar from '../layout/UserNavbar';
 import HelpCenter from './HelpCenter';
+import ErrorPage from './ErrorPage';
 import './UserBase.scss';
 
 
@@ -18,6 +19,7 @@ const UserBase = () => {
           <Row>
             <Switch>
               <Route exact path={`${path}/help`} component={HelpCenter} />
+              <Route component={ErrorPage} />
             </Switch>
           </Row>
         </Col>

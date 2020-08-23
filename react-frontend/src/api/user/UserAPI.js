@@ -2,9 +2,9 @@ import axios from 'axios';
 
 export const fetchUserFromServer = async function () {
     try {
-        let response = await axios.get('/api/users');
-        if (response.data?.user) {
-            return { user: response.data.user };
+        let response = await axios.get('/api/users/current');
+        if (response.data) {
+            return response.data;
         } else {
             throw new Error('No user received');
         }

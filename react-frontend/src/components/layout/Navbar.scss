@@ -56,13 +56,14 @@
   white-space: nowrap;
 }
 
-#user-icon-container {
+#myapp-navbar .navbar-text#user-icon-container {
+  color: $background-color;
   padding-top: 7px;
   padding-bottom: 4px;
   cursor: pointer;
 }
 
-#user-icon-container > svg {
+#myapp-navbar .navbar-text#user-icon-container > svg {
   width: 24px;
   height: 24px;
 }
