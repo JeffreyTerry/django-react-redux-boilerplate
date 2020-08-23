@@ -2,7 +2,7 @@
 A boilerplate full-stack web application that uses Docker, Django, React, Redux, and React-Bootstrap.
 Additional built-in technologies include Django Rest Framework and Python Social Auth on the backend, and Axios, Formik, Lodash, Luxor, Tippy, and Uppy on the frontend.
 
-<!-- TODO add Dockerhub build status icon -->
+<!-- TODO add Dockerhub webhook -->
 
 -----------
 
@@ -14,7 +14,8 @@ Simply install Docker.
 
 ### Running the Development Server
 + First, create a file named `myapp.env` inside of the project's root directory. Then, put the variables found in the `example_environment_variables.env` file in that file, adding the real values as necessary.
-+ Then, from the project root, simply run `docker-compose up --build`. The frontend and backend will automatically reload whenever you make changes to the code. Run `docker-compose down` once you're finished.
++ Then, from the project root, simply run `docker-compose up --build`. Once the docker image has finished building, you'll be able to access the website at `http://localhost:8000`. Docker will automatically rebuild the frontend and the whenever you make changes to the code (though you'll still have to refresh the page to get the updated version).
++ To bring the volumes offline once you're finished, you can run `docker-compose down` (though this step isn't strictly necessary).
 
 ### Troubleshooting
 + To ssh into the local Docker container during development, run `docker exec -it my_app_backend bash -l`. To ssh into the frontend development container, run `docker exec -it my_app_backend bash -l`.
