@@ -19,7 +19,7 @@ sudo usermod -aG docker ec2-user
 
 # Log in to Dockerhub for Continuous Integration
 # TODO get this code working and put it back in once I'm ready to start deploying the app.
-# docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
+# docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_ACCESS_TOKEN
 
 # Pull the latest build from Docker Hub
 docker pull myappautomation/myapp:latest

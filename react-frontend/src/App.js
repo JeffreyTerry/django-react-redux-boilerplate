@@ -16,7 +16,6 @@ const App = () => {
   const dispatch = useDispatch();
   const isAuthenticated = getCookie('isAuthenticated') === 'true';
 
-  // TODO make sure this code works as expected
   useEffect(() => {
     if (isAuthenticated) {
       // ISAAC -- this is how you fetch stuff from the API
